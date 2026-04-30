@@ -105,7 +105,7 @@
             background-color: var(--primary-light);
         }
 
-        /* Header & Navigation */
+        /* Header & Navigation - Updated */
         .navbar {
             background-color: white;
             box-shadow: var(--shadow-sm);
@@ -116,41 +116,54 @@
 
         .nav-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 1rem 1.5rem;
             max-width: 1280px;
             margin: 0 auto;
+            position: relative;
         }
 
-        /* Logo wrapper to align SVG and text with 5px gap */
+        /* Logo wrapper - centered as one block, wider */
         .logo-wrapper {
             display: flex;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
+            gap: 12px;
             text-decoration: none;
+            width: 75%;
+            max-width: 80%;
         }
 
-        /* SVG Icon container */
+        /* SVG Icon container - larger */
         .svg-icon {
             display: flex;
             align-items: center;
             line-height: 0;
+            flex-shrink: 0;
         }
 
-        /* Logo text styling */
+        .svg-icon svg {
+            width: 140px;
+            height: auto;
+        }
+
+        /* Logo text styling - larger */
         .logo {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
-            white-space: nowrap;
+            line-height: 1.2;
         }
 
+        /* Navigation links - positioned on the right */
         .nav-links {
             display: flex;
             gap: 2rem;
             align-items: center;
+            position: absolute;
+            right: 1.5rem;
         }
 
         .nav-links a {
@@ -165,12 +178,9 @@
             text-decoration: underline;
         }
 
+        /* Mobile menu button - removed (hidden) */
         .mobile-menu-btn {
             display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
         }
 
         /* Hero Section */
@@ -258,7 +268,7 @@
             font-weight: 600;
         }
 
-        /* Updated Gallery Section - Card Grid */
+        /* Gallery Section - Card Grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -446,7 +456,7 @@
             font-family: inherit;
         }
 
-        /* About Section Image - Responsive Fix */
+        /* About Section Image */
         .about-image {
             max-width: 100%;
             height: auto;
@@ -456,56 +466,90 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
+            .logo {
+                font-size: 1.6rem;
+            }
+            
+            .svg-icon svg {
+                width: 100px;
+            }
+            
+            .logo-wrapper {
+                width: 70%;
+                gap: 8px;
+            }
+            
             .nav-links {
-                display: none;
+                gap: 1.5rem;
             }
-            .mobile-menu-btn {
-                display: block;
-            }
+        }
+
+        @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
+            
             .section {
                 padding: 3rem 0;
             }
+            
             .services-grid {
                 grid-template-columns: 1fr;
             }
             
-            /* Mobile navigation adjustments */
-            .logo {
-                font-size: 0.85rem;
-                white-space: normal;
-                line-height: 1.2;
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 0.75rem 1rem;
             }
             
             .logo-wrapper {
-                gap: 5px;
-                max-width: 65%;
+                width: auto;
+                max-width: 100%;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .logo {
+                font-size: 1.25rem;
+                white-space: normal;
+                text-align: left;
+                line-height: 1.2;
             }
             
             .svg-icon svg {
-                width: 40px;
-                height: auto;
+                width: 55px;
             }
-
+            
+            .nav-links {
+                position: static;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+            
             .trust-badges {
                 gap: 0.75rem;
             }
-
+            
             .badge {
-                font-size: 0.75rem;
+                font-size: 0.7rem;
                 white-space: normal;
                 text-align: center;
             }
-
+            
             .step-number {
                 width: 50px;
                 height: 50px;
                 font-size: 1.25rem;
             }
-
+            
             .cta-section h2 {
                 font-size: 1.5rem;
             }
@@ -532,25 +576,22 @@
             .service-card p {
                 font-size: 0.875rem;
             }
-        }
-
-        /* Mobile nav open */
-        .nav-links.active {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 2rem;
-            box-shadow: var(--shadow-md);
-            gap: 1rem;
-            z-index: 99;
-        }
-
-        .nav-links.active a {
-            padding: 0.5rem 0;
+            
+            .logo {
+                font-size: 1rem;
+            }
+            
+            .svg-icon svg {
+                width: 45px;
+            }
+            
+            .nav-links {
+                gap: 0.75rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -561,7 +602,7 @@
         <div class="nav-container">
             <a href="#" class="logo-wrapper">
                 <div class="svg-icon">
-                    <svg width="100" height="75" viewBox="0 0 474 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="140" height="105" viewBox="0 0 474 182" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M197.427 62.3636C197.427 92.2727 163.736 71.1462 72.131 62.3636C-19.4739 53.5811 -28.5074 136.074 72.131 127.273C172.769 118.472 197.427 101.182 197.427 127.273C197.427 153.364 218.547 182 218.547 182H248.801V0H218.547C218.547 0 197.427 32.4545 197.427 62.3636Z" fill="black"/>
                         <path d="M260.602 0H344.191L327.726 83.1358H260.602V0Z" fill="#23408E"/>
                         <path d="M260.602 153.914H471.05L461.598 182H260.602V153.914Z" fill="#CC0009"/>
@@ -572,13 +613,12 @@
                 </div>
                 <span class="logo">Best Choice Painting Improvements</span>
             </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-            <div class="nav-links" id="navLinks">
+            <!-- <div class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#about">About</a>
-            </div>
+            </div> -->
         </div>
     </nav>
 
@@ -632,7 +672,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section - Card Grid (Updated) -->
+    <!-- Gallery Section - Card Grid -->
     <section id="gallery" class="section">
         <div class="container">
             <div class="text-center">
@@ -873,13 +913,6 @@
             form.reset();
         });
 
-        // Mobile menu toggle
-        const mobileBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        mobileBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -889,7 +922,6 @@
                 if (target) {
                     e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth' });
-                    navLinks.classList.remove('active');
                 }
             });
         });
