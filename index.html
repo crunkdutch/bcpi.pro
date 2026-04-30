@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Professional interior & exterior painting, cabinet painting, and pressure washing for homes and businesses. Free estimates. Clean, careful crews. Warranties you can trust.">
+    <title>Best Choice Painting Improvements | Professional Painting & Pressure Washing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* Color Variables */
+        :root {
+            --primary: #23408E;
+            --primary-dark: #0f2a44;
+            --primary-light: #2c5282;
+            --accent: #CC0009;
+            --accent-light: #ff383c;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-sm {
+            padding: 3rem 0;
+        }
+
+        .section-bg-light {
+            background-color: var(--gray-50);
+        }
+
+        .section-bg-white {
+            background-color: #ffffff;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            font-weight: 600;
+            padding: 0.85rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Header & Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Logo wrapper to align SVG and text with 5px gap */
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+        }
+
+        /* SVG Icon container */
+        .svg-icon {
+            display: flex;
+            align-items: center;
+            line-height: 0;
+        }
+
+        /* Logo text styling */
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 5rem 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+        }
+
+        /* Services Grid - 3 columns */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.25rem;
+        }
+
+        .service-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Updated Gallery Section - Card Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-image {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+            background-color: var(--gray-200);
+        }
+
+        .gallery-card h3 {
+            font-size: 1.25rem;
+            margin: 1rem 1rem 0.5rem 1rem;
+            color: var(--primary);
+        }
+
+        .gallery-card p {
+            font-size: 0.9rem;
+            margin: 0 1rem 1rem 1rem;
+            color: var(--gray-600);
+        }
+
+        /* Steps */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+        }
+
+        .feature h4 {
+            margin-bottom: 0.25rem;
+            color: var(--primary);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--gray-700);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-50);
+            color: var(--gray-400);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        /* Modal (Quote Form) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 1rem;
+            padding: 2rem;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--gray-600);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            font-family: inherit;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .section {
+                padding: 3rem 0;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Mobile navigation adjustments */
+            .logo {
+                font-size: 0.95rem;
+                white-space: normal;
+            }
+            
+            .logo-wrapper {
+                gap: 5px;
+                max-width: 65%;
+            }
+            
+            .svg-icon svg {
+                width: 45px;
+                height: auto;
+            }
+        }
+
+        /* Mobile nav open */
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            gap: 1rem;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-wrapper">
+                <div class="svg-icon">
+                    <svg width="100" height="75" viewBox="0 0 474 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M197.427 62.3636C197.427 92.2727 163.736 71.1462 72.131 62.3636C-19.4739 53.5811 -28.5074 136.074 72.131 127.273C172.769 118.472 197.427 101.182 197.427 127.273C197.427 153.364 218.547 182 218.547 182H248.801V0H218.547C218.547 0 197.427 32.4545 197.427 62.3636Z" fill="black"/>
+                        <path d="M260.602 0H344.191L327.726 83.1358H260.602V0Z" fill="#23408E"/>
+                        <path d="M260.602 153.914H471.05L461.598 182H260.602V153.914Z" fill="#CC0009"/>
+                        <path d="M260.602 104.481H459.078L471.05 132.568H260.602V104.481Z" fill="#CC0009"/>
+                        <path d="M332.028 55.0494H462.308L463.292 83.1358H324.523L332.028 55.0494Z" fill="#CC0009"/>
+                        <path d="M343.606 0H474L463.292 32.5802H337.307L343.606 0Z" fill="#CC0009"/>
+                    </svg>
+                </div>
+                <span class="logo">Best Choice Painting Improvements</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Painting & Improvements.<br>No Mess. No Stress.</h1>
+                <p>Interior & exterior painting, cabinet painting, and pressure washing for homes and businesses. Free estimates. Clean, careful crews. Warranties you can trust.</p>
+                <button class="btn" id="heroQuoteBtn">Get Your Free Estimate →</button>
+                <div class="trust-badges">
+                    <span class="badge">✓ Free In-Home Estimates</span>
+                    <span class="badge">✓ Clean, Careful Crews</span>
+                    <span class="badge">✓ Premium Paints</span>
+                    <span class="badge">✓ 24-Hour Response</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - 3 Tiles -->
+    <section id="services" class="section section-bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>Our Services</h2>
+                <p style="color: var(--gray-600); margin-top: 0.5rem;">Residential & Commercial. One company does it all. The Best Choice.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1: Interior & Exterior Painting (Combined) -->
+                <div class="service-card">
+                    <div class="service-icon">🏠☀️</div>
+                    <h3>Interior & Exterior Painting</h3>
+                    <p>Complete home painting inside and out. Walls, ceilings, trim, siding, stucco, and brick. We move furniture, protect floors, pressure wash exteriors, and apply premium paints that last.</p>
+                    <a href="#" class="service-link" data-service="painting">Learn More →</a>
+                </div>
+                <!-- Service 2: Cabinet Painting -->
+                <div class="service-card">
+                    <div class="service-icon">🚪</div>
+                    <h3>Cabinet Painting</h3>
+                    <p>Spray application that looks like a factory finish. Kitchen, bathroom, and built-in cabinets. Durable, washable surfaces that resist chipping and yellowing.</p>
+                    <a href="#" class="service-link" data-service="cabinet">Learn More →</a>
+                </div>
+                <!-- Service 3: Pressure Washing -->
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Pressure Washing</h3>
+                    <p>Driveways, decks, siding, roofs, and fences. Remove dirt, mold, mildew, and stains. Eco-friendly solutions. Restore your home's curb appeal safely.</p>
+                    <a href="#" class="service-link" data-service="pressure-washing">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section - Card Grid (Updated) -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Our Recent Work</h2>
+                <p style="color: var(--gray-600);">View some of our favorite painting and pressure washing projects.</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery cards will be populated by JavaScript -->
+                <div style="text-align: center; grid-column: 1/-1;">Loading projects...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>Three Simple Steps to a Fresh Look</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Free In-Home Estimate</h3>
+                    <p>We visit your home, measure the space, and provide a detailed written quote.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Prep, Protect, and Paint or Wash</h3>
+                    <p>We move furniture, cover floors, repair holes, and apply premium paint — or pressure wash to perfection.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Final Walkthrough</h3>
+                    <p>We inspect every surface with you. You pay only when you're happy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Why Homeowners Choose Us</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature"><span class="feature-icon">⏱️</span><div><h4>We show up on time</h4><p>Our crews arrive within the promised window, every time.</p></div></div>
+                <div class="feature"><span class="feature-icon">🧹</span><div><h4>We clean up completely</h4><p>No paint drips, no dust, no furniture out of place.</p></div></div>
+                <div class="feature"><span class="feature-icon">📋</span><div><h4>Detailed written estimates</h4><p>No surprises. We list every surface, every coat, and every cost.</p></div></div>
+                <div class="feature"><span class="feature-icon">🛡️</span><div><h4>2-Year warranty</h4><p>Paint peeling? Cracking? We come back and fix it for free.</p></div></div>
+                <div class="feature"><span class="feature-icon">💬</span><div><h4>24-hour response</h4><p>You never wait days to hear back from us.</p></div></div>
+                <div class="feature"><span class="feature-icon">🎨</span><div><h4>Free color consultation</h4><p>Not sure which white or gray? We'll help you choose.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2>What Our Customers Are Saying</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial"><p class="testimonial-text">"I'm sold on this company for my future projects. Sam was competatively priced which was great, but what really stood out was the quality and work ethic of the crew. They were so polite as they arrived early and stayed late to complete each phase of the project. "</p><p class="testimonial-author">— Jeff J.</p></div>
+                <div class="testimonial"><p class="testimonial-text">"Sam is simply the best. From his prompt response to our original request for an estimate all the way to finishing the job he is an absolute pro! He made our condo look brand new at a fair price! If you want it done right call Sam!"</p><p class="testimonial-author">— Brenda V.</p></div>
+                <div class="testimonial"><p class="testimonial-text">"Hired Sam to fix up our new house in San Diego before we moved in. He repaired a ceiling where wallpaper had been removed, painted baseboards, replaced a section of dry wall, repainted the front door, removed a built in desk and even did a stucco repair! "</p><p class="testimonial-author">— Nicole Erin B.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="text-center">
+                <h2>About Best Choice Painting Improvements</h2>
+            </div>
+            <div style="max-width: 800px; margin: 2rem auto 0; text-align: center;">
+                <img width="800px" src="https://scontent.fslc3-2.fna.fbcdn.net/v/t39.30808-6/555516662_24389980953986754_9173040478012284223_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=WeSnDFseX38Q7kNvwEGfnaq&_nc_oc=AdoOH5BJ8DjLqlHR31p0OX9Z71wJrnDioA-u8o5vceQ-M3MXVmtGxDS7GxuDzno44V0&_nc_zt=23&_nc_ht=scontent.fslc3-2.fna&_nc_gid=5JI53T6G5DQEdzrLotcogA&_nc_ss=7b2a8&oh=00_Af14bo9eFFZd1fG54tO5FYeohTackh2AICG8v2_-7aYK8g&oe=69F8A3AF"></img>
+                <p style="margin-bottom: 1rem;">We've been painting homes and businesses in our community for over a decade. Every painter can hold a brush. Not every painter can show up on time, communicate clearly, and clean up like they were never there.</p>
+                <p>We're not interested in being the biggest painting company. We want to be the one you recommend to your neighbor. And now we're proud to offer professional pressure washing services to keep your entire property looking its best.</p>
+                <div style="margin-top: 2rem;">
+                    <p><strong>📍 Service Area:</strong> Napa County and surrounding areas including, Sonoma, Sacremento, and Lake County.</p>
+                    <p><strong>✓ Licensed & Insured</strong> | <strong>✓ EPA Lead-Safe Certified</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="cta-section section">
+        <div class="container">
+            <h2>Ready for a Fresh Look?</h2>
+            <p style="margin-bottom: 1.5rem;">Get your free, no-obligation estimate today. We'll respond within 24 hours.</p>
+            <button class="btn" id="ctaQuoteBtn">Request an Estimate →</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🎨 Best Choice Painting Improvements | Professional Painting & Pressure Washing</p>
+            <p style="margin-top: 0.5rem;">📞 (619) 886-0306 | ✉️ hello@bestchoicepainting.com</p>
+            <p style="margin-top: 1rem; font-size: 0.875rem;">© 2026 Best Choice Painting Improvements. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 style="margin-bottom: 1rem;">Request a Free Estimate</h2>
+            <form id="quoteForm">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Service Type</label>
+                    <select id="serviceType">
+                        <option>Interior & Exterior Painting</option>
+                        <option>Cabinet Painting</option>
+                        <option>Pressure Washing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea rows="3" id="details" placeholder="Square footage, rooms, timeline, or specific areas to clean..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Submit Request</button>
+            </form>
+            <p style="font-size: 0.75rem; color: var(--gray-600); margin-top: 1rem; text-align: center;">We'll respond within 24 hours.</p>
+        </div>
+    </div>
+
+    <script>
+        // --- Gallery Data ---
+        const galleryData = [
+            {
+                imgSrc: "images/living-room-after.jpg",
+                imgAlt: "Bright modern living room after painting",
+                title: "Modern Living Room",
+                description: "Interior painting - Sherwin Williams 'Agreeable Gray'"
+            },
+            {
+                imgSrc: "images/exterior-after.jpg",
+                imgAlt: "Fresh exterior house paint",
+                title: "Complete Exterior Refresh",
+                description: "Exterior painting & pressure washing"
+            },
+            {
+                imgSrc: "images/kitchen-after.jpg",
+                imgAlt: "Refinished kitchen cabinets",
+                title: "Cabinet Transformation",
+                description: "Sprayed Benjamin Moore 'Simply White'"
+            },
+            {
+                imgSrc: "images/deck-after.jpg",
+                imgAlt: "Clean wood deck after pressure washing",
+                title: "Deck Restoration",
+                description: "Pressure washing & brightening"
+            },
+            {
+                imgSrc: "images/cabinet-after.jpg",
+                imgAlt: "Updated kitchen with new wall color",
+                title: "Kitchen Makeover",
+                description: "Walls, trim, and ceiling"
+            },
+            {
+                imgSrc: "images/bathroom-vanity.jpg",
+                imgAlt: "Painted bathroom vanity",
+                title: "Vanity Refresh",
+                description: "Cabinet painting - satin finish"
+            }
+        ];
+
+        // Function to render the gallery
+        function renderGallery() {
+            const galleryGrid = document.getElementById('galleryGrid');
+            if (!galleryGrid) return;
+
+            // Clear loading text
+            galleryGrid.innerHTML = '';
+
+            galleryData.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'gallery-card';
+                
+                card.innerHTML = `
+                    <img class="gallery-image" src="${project.imgSrc}" alt="${project.imgAlt}" loading="lazy" onerror="this.src='https://placehold.co/600x450/e2e8f0/475569?text=Image+Coming+Soon'">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                `;
+                
+                galleryGrid.appendChild(card);
+            });
+        }
+
+        // Modal Logic
+        const modal = document.getElementById('quoteModal');
+        const openModalBtns = document.querySelectorAll('#heroQuoteBtn, #ctaQuoteBtn');
+        const closeModalBtn = document.querySelector('.close-modal');
+
+        function openModal() {
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+        closeModalBtn.addEventListener('click', closeModal);
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Form submission (console log + alert)
+        const form = document.getElementById('quoteForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('serviceType').value;
+            const details = document.getElementById('details').value;
+
+            console.log('Quote Request:', { name, email, phone, service, details });
+            alert(`Thank you, ${name}! We've received your request for ${service} and will contact you within 24 hours.`);
+            closeModal();
+            form.reset();
+        });
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Service link handlers (3 services)
+        document.querySelectorAll('.service-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const service = link.getAttribute('data-service');
+                let message = '';
+                switch(service) {
+                    case 'painting':
+                        message = 'Interior & Exterior Painting: We paint walls, ceilings, trim, siding, stucco, and brick. Includes pressure washing prep for exteriors. Request an estimate for a detailed quote!';
+                        break;
+                    case 'cabinet':
+                        message = 'Cabinet Painting: Spray application for a smooth, factory-like finish. Durable and washable. Request an estimate for your kitchen or bathroom cabinets!';
+                        break;
+                    case 'pressure-washing':
+                        message = 'Pressure Washing: Driveways, decks, siding, roofs, and fences. Eco-friendly solutions. Restore your property\'s curb appeal safely. Request an estimate!';
+                        break;
+                    default:
+                        message = 'Call us or request an estimate for more details!';
+                }
+                alert(message);
+            });
+        });
+
+        // Run gallery render when page loads
+        document.addEventListener('DOMContentLoaded', renderGallery);
+    </script>
+</body>
+</html>
