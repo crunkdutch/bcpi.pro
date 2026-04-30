@@ -40,6 +40,10 @@
         }
 
         /* Utility Classes */
+        #about {
+            border-bottom: #000 1px solid;
+        }
+
         .container {
             max-width: 1280px;
             margin: 0 auto;
@@ -105,7 +109,7 @@
             background-color: var(--primary-light);
         }
 
-        /* Header & Navigation - Updated */
+        /* Header & Navigation */
         .navbar {
             background-color: white;
             box-shadow: var(--shadow-sm);
@@ -151,10 +155,11 @@
         /* Logo text styling - larger */
         .logo {
             font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary);
+            font-weight: 500;
+            color: #000;
             text-decoration: none;
             line-height: 1.2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         /* Navigation links - positioned on the right */
@@ -366,6 +371,17 @@
             margin-top: 2rem;
         }
 
+        /* Center the button container */
+        #yelpReviews {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .testimonials-btn-wrapper {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
         .testimonial {
             background: white;
             padding: 1.5rem;
@@ -396,12 +412,53 @@
             margin-bottom: 1rem;
         }
 
+        /* Trusted Brands Section */
+        .trusted-brands {
+            background: #fff;
+            text-align: center;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .brand-item {
+            flex: 0 1 auto;
+            text-align: center;
+        }
+
+        .brand-logo {
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(0%);
+            transition: filter 0.3s ease, transform 0.2s ease;
+        }
+
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .brand-name {
+            margin-top: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.9rem;
+        }
+
         /* Footer */
         .footer {
             background: var(--gray-50);
             color: var(--gray-400);
             padding: 3rem 0;
             text-align: center;
+            border-top: 1px solid var(--gray-200);
         }
 
         /* Modal (Quote Form) */
@@ -553,6 +610,14 @@
             .cta-section h2 {
                 font-size: 1.5rem;
             }
+            
+            .brands-grid {
+                gap: 2rem;
+            }
+            
+            .brand-logo {
+                max-height: 60px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -591,6 +656,15 @@
             
             .nav-links a {
                 font-size: 0.8rem;
+            }
+            
+            .brands-grid {
+                gap: 1.5rem;
+                flex-direction: column;
+            }
+            
+            .brand-logo {
+                max-height: 50px;
             }
         }
     </style>
@@ -649,24 +723,24 @@
             <div class="services-grid">
                 <!-- Service 1: Interior & Exterior Painting (Combined) -->
                 <div class="service-card">
-                    <div class="service-icon">🏠☀️</div>
+                    <div class="service-icon">🏠</div>
                     <h3>Interior & Exterior Painting</h3>
                     <p>Complete home painting inside and out. Walls, ceilings, trim, siding, stucco, and brick. We move furniture, protect floors, pressure wash exteriors, and apply premium paints that last.</p>
-                    <a href="#" class="service-link" data-service="painting">Learn More →</a>
+                    <a href="tel:+16198860306" class="service-link" data-service="painting">Learn More →</a>
                 </div>
                 <!-- Service 2: Cabinet Painting -->
                 <div class="service-card">
                     <div class="service-icon">🚪</div>
                     <h3>Cabinet Painting</h3>
                     <p>Spray application that looks like a factory finish. Kitchen, bathroom, and built-in cabinets. Durable, washable surfaces that resist chipping and yellowing.</p>
-                    <a href="#" class="service-link" data-service="cabinet">Learn More →</a>
+                    <a href="tel:+16198860306" class="service-link" data-service="cabinet">Learn More →</a>
                 </div>
                 <!-- Service 3: Pressure Washing -->
                 <div class="service-card">
                     <div class="service-icon">💧</div>
                     <h3>Pressure Washing</h3>
                     <p>Driveways, decks, siding, roofs, and fences. Remove dirt, mold, mildew, and stains. Eco-friendly solutions. Restore your home's curb appeal safely.</p>
-                    <a href="#" class="service-link" data-service="pressure-washing">Learn More →</a>
+                    <a href="tel:+16198860306" class="service-link" data-service="pressure-washing">Learn More →</a>
                 </div>
             </div>
         </div>
@@ -740,11 +814,38 @@
                 <div class="testimonial"><p class="testimonial-text">"Sam is simply the best. From his prompt response to our original request for an estimate all the way to finishing the job he is an absolute pro! He made our condo look brand new at a fair price! If you want it done right call Sam!"</p><p class="testimonial-author">— Brenda V.</p></div>
                 <div class="testimonial"><p class="testimonial-text">"Hired Sam to fix up our new house in San Diego before we moved in. He repaired a ceiling where wallpaper had been removed, painted baseboards, replaced a section of dry wall, repainted the front door, removed a built in desk and even did a stucco repair!"</p><p class="testimonial-author">— Nicole Erin B.</p></div>
             </div>
+            <div class="testimonials-btn-wrapper">
+                <button class="btn"><a id="yelpReviews" href="https://www.yelp.com/biz/best-choice-painting-improvements-napa?rr=5" target="_blank">Read more Reviews →</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brands Section -->
+    <section class="trusted-brands section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Trusted Brands We Use</h2>
+                <p style="color: var(--gray-600); margin-top: 0.5rem;">We only use premium paints from the industry's most trusted manufacturers.</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <img class="brand-logo" src="images/sherwin-williams.jpg" alt="Sherwin-Williams Logo" onerror="this.src='https://placehold.co/200x80/e2e8f0/475569?text=Sherwin-Williams'">
+                    <div class="brand-name">Sherwin-Williams</div>
+                </div>
+                <div class="brand-item">
+                    <img class="brand-logo" src="images/dunn-edwards.jpg" alt="Dunn Edwards Logo" onerror="this.src='https://placehold.co/200x80/e2e8f0/475569?text=Dunn+Edwards'">
+                    <div class="brand-name">Dunn Edwards</div>
+                </div>
+                <div class="brand-item">
+                    <img class="brand-logo" src="images/ppg.jpg" alt="PPG Logo" onerror="this.src='https://placehold.co/200x80/e2e8f0/475569?text=PPG'">
+                    <div class="brand-name">PPG Paints</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section section-bg-light">
         <div class="container">
             <div class="text-center">
                 <h2>About Best Choice Painting Improvements</h2>
@@ -927,27 +1028,27 @@
         });
 
         // Service link handlers (3 services)
-        document.querySelectorAll('.service-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const service = link.getAttribute('data-service');
-                let message = '';
-                switch(service) {
-                    case 'painting':
-                        message = 'Interior & Exterior Painting: We paint walls, ceilings, trim, siding, stucco, and brick. Includes pressure washing prep for exteriors. Request an estimate for a detailed quote!';
-                        break;
-                    case 'cabinet':
-                        message = 'Cabinet Painting: Spray application for a smooth, factory-like finish. Durable and washable. Request an estimate for your kitchen or bathroom cabinets!';
-                        break;
-                    case 'pressure-washing':
-                        message = 'Pressure Washing: Driveways, decks, siding, roofs, and fences. Eco-friendly solutions. Restore your property\'s curb appeal safely. Request an estimate!';
-                        break;
-                    default:
-                        message = 'Call us or request an estimate for more details!';
-                }
-                alert(message);
-            });
-        });
+        // document.querySelectorAll('.service-link').forEach(link => {
+        //     link.addEventListener('click', (e) => {
+        //         e.preventDefault();
+        //         const service = link.getAttribute('data-service');
+        //         let message = '';
+        //         switch(service) {
+        //             case 'painting':
+        //                 message = 'Interior & Exterior Painting: We paint walls, ceilings, trim, siding, stucco, and brick. Includes pressure washing prep for exteriors. Request an estimate for a detailed quote!';
+        //                 break;
+        //             case 'cabinet':
+        //                 message = 'Cabinet Painting: Spray application for a smooth, factory-like finish. Durable and washable. Request an estimate for your kitchen or bathroom cabinets!';
+        //                 break;
+        //             case 'pressure-washing':
+        //                 message = 'Pressure Washing: Driveways, decks, siding, roofs, and fences. Eco-friendly solutions. Restore your property\'s curb appeal safely. Request an estimate!';
+        //                 break;
+        //             default:
+        //                 message = 'Call us or request an estimate for more details!';
+        //         }
+        //         alert(message);
+        //     });
+        // });
 
         // Run gallery render when page loads
         document.addEventListener('DOMContentLoaded', renderGallery);
