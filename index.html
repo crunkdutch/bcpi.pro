@@ -446,6 +446,15 @@
             font-family: inherit;
         }
 
+        /* About Section Image - Responsive Fix */
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -466,8 +475,9 @@
             
             /* Mobile navigation adjustments */
             .logo {
-                font-size: 0.95rem;
+                font-size: 0.85rem;
                 white-space: normal;
+                line-height: 1.2;
             }
             
             .logo-wrapper {
@@ -476,8 +486,51 @@
             }
             
             .svg-icon svg {
-                width: 45px;
+                width: 40px;
                 height: auto;
+            }
+
+            .trust-badges {
+                gap: 0.75rem;
+            }
+
+            .badge {
+                font-size: 0.75rem;
+                white-space: normal;
+                text-align: center;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                padding: 0.7rem 1.25rem;
+                font-size: 0.875rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.25rem;
+            }
+            
+            .service-card p {
+                font-size: 0.875rem;
             }
         }
 
@@ -494,6 +547,10 @@
             box-shadow: var(--shadow-md);
             gap: 1rem;
             z-index: 99;
+        }
+
+        .nav-links.active a {
+            padding: 0.5rem 0;
         }
     </style>
 </head>
@@ -639,9 +696,9 @@
                 <h2>What Our Customers Are Saying</h2>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial"><p class="testimonial-text">"I'm sold on this company for my future projects. Sam was competatively priced which was great, but what really stood out was the quality and work ethic of the crew. They were so polite as they arrived early and stayed late to complete each phase of the project. "</p><p class="testimonial-author">— Jeff J.</p></div>
+                <div class="testimonial"><p class="testimonial-text">"I'm sold on this company for my future projects. Sam was competatively priced which was great, but what really stood out was the quality and work ethic of the crew. They were so polite as they arrived early and stayed late to complete each phase of the project."</p><p class="testimonial-author">— Jeff J.</p></div>
                 <div class="testimonial"><p class="testimonial-text">"Sam is simply the best. From his prompt response to our original request for an estimate all the way to finishing the job he is an absolute pro! He made our condo look brand new at a fair price! If you want it done right call Sam!"</p><p class="testimonial-author">— Brenda V.</p></div>
-                <div class="testimonial"><p class="testimonial-text">"Hired Sam to fix up our new house in San Diego before we moved in. He repaired a ceiling where wallpaper had been removed, painted baseboards, replaced a section of dry wall, repainted the front door, removed a built in desk and even did a stucco repair! "</p><p class="testimonial-author">— Nicole Erin B.</p></div>
+                <div class="testimonial"><p class="testimonial-text">"Hired Sam to fix up our new house in San Diego before we moved in. He repaired a ceiling where wallpaper had been removed, painted baseboards, replaced a section of dry wall, repainted the front door, removed a built in desk and even did a stucco repair!"</p><p class="testimonial-author">— Nicole Erin B.</p></div>
             </div>
         </div>
     </section>
@@ -653,11 +710,11 @@
                 <h2>About Best Choice Painting Improvements</h2>
             </div>
             <div style="max-width: 800px; margin: 2rem auto 0; text-align: center;">
-                <img max-width="800px" src="https://scontent.fslc3-2.fna.fbcdn.net/v/t39.30808-6/555516662_24389980953986754_9173040478012284223_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=WeSnDFseX38Q7kNvwEGfnaq&_nc_oc=AdoOH5BJ8DjLqlHR31p0OX9Z71wJrnDioA-u8o5vceQ-M3MXVmtGxDS7GxuDzno44V0&_nc_zt=23&_nc_ht=scontent.fslc3-2.fna&_nc_gid=5JI53T6G5DQEdzrLotcogA&_nc_ss=7b2a8&oh=00_Af14bo9eFFZd1fG54tO5FYeohTackh2AICG8v2_-7aYK8g&oe=69F8A3AF"></img>
+                <img class="about-image" src="https://scontent.fslc3-2.fna.fbcdn.net/v/t39.30808-6/555516662_24389980953986754_9173040478012284223_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=WeSnDFseX38Q7kNvwEGfnaq&_nc_oc=AdoOH5BJ8DjLqlHR31p0OX9Z71wJrnDioA-u8o5vceQ-M3MXVmtGxDS7GxuDzno44V0&_nc_zt=23&_nc_ht=scontent.fslc3-2.fna&_nc_gid=5JI53T6G5DQEdzrLotcogA&_nc_ss=7b2a8&oh=00_Af14bo9eFFZd1fG54tO5FYeohTackh2AICG8v2_-7aYK8g&oe=69F8A3AF" alt="Best Choice Painting Improvements team">
                 <p style="margin-bottom: 1rem;">We've been painting homes and businesses in our community for over a decade. Every painter can hold a brush. Not every painter can show up on time, communicate clearly, and clean up like they were never there.</p>
                 <p>We're not interested in being the biggest painting company. We want to be the one you recommend to your neighbor. And now we're proud to offer professional pressure washing services to keep your entire property looking its best.</p>
                 <div style="margin-top: 2rem;">
-                    <p><strong>📍 Service Area:</strong> Napa County and surrounding areas including, Sonoma, Sacremento, and Lake County.</p>
+                    <p><strong>📍 Service Area:</strong> Napa County and surrounding areas including, Sonoma, Sacramento, and Lake County.</p>
                     <p><strong>✓ Licensed & Insured</strong> | <strong>✓ EPA Lead-Safe Certified</strong></p>
                 </div>
             </div>
