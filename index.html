@@ -31,52 +31,89 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Best Choice Painting Improvements",
-        "image": "https://bestpainters.pro/images/og-image.png",
+        "@type": ["HousePainter", "LocalBusiness"],
         "@id": "https://bestpainters.pro/",
+        "name": "Best Choice Painting Improvements",
+        "description": "Professional interior & exterior painting, cabinet painting, and pressure washing for homes and businesses in Napa County and surrounding areas. Free estimates, 2-year warranty, 24-hour response.",
         "url": "https://bestpainters.pro/",
-        "telephone": "(619) 886-0306",
+        "image": "https://bestpainters.pro/images/og-image.png",
+        "logo": "https://bestpainters.pro/images/best-choice-painting-improvements-logo.png",
+        "telephone": "+1-619-886-0306",
+        "email": "info@bestpainters.pro",
+        "priceRange": "$$",
+        "currenciesAccepted": "USD",
+        "founder": {
+            "@type": "Person",
+            "name": "Sam"
+        },
+        "sameAs": [
+            "https://www.yelp.com/biz/best-choice-painting-improvements-napa"
+        ],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Napa",
             "addressRegion": "CA",
             "addressCountry": "US"
         },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.2975,
+            "longitude": -122.2869
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Best+Choice+Painting+Improvements+Napa+CA",
         "areaServed": [
-            {
-                "@type": "City",
-                "name": "Napa County"
-            },
-            {
-                "@type": "City",
-                "name": "Sonoma"
-            },
-            {
-                "@type": "City",
-                "name": "Sacramento"
-            },
-            {
-                "@type": "City",
-                "name": "San Diego"
-            }
+            { "@type": "City", "name": "Napa" },
+            { "@type": "AdministrativeArea", "name": "Napa County" },
+            { "@type": "City", "name": "Sonoma" },
+            { "@type": "City", "name": "Sacramento" },
+            { "@type": "City", "name": "San Diego" }
         ],
-        "description": "Professional interior & exterior painting, cabinet painting, and pressure washing for homes and businesses in Napa County and surrounding areas. Free estimates, 2-year warranty, 24-hour response.",
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-            ],
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             "opens": "08:00",
             "closes": "18:00"
         },
-        "priceRange": "$$"
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Painting & Improvement Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Interior & Exterior Painting",
+                        "description": "Complete home painting inside and out. Walls, ceilings, trim, siding, stucco, and brick."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Cabinet Painting",
+                        "description": "Spray application that looks like a factory finish for kitchen, bathroom, and built-in cabinets."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pressure Washing",
+                        "description": "Driveways, decks, siding, roofs, and fences. Eco-friendly solutions."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Drywall & Texture Matching",
+                        "description": "Drywall repair and texture matching as part of interior improvement projects."
+                    }
+                }
+            ]
+        }
     }
-</script>
+    </script>
 </head>
 <body>
     <!-- Navigation - Updated alt text on SVG for accessibility -->
@@ -212,12 +249,12 @@
                 <h2>What Our Customers Are Saying</h2>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial"><p class="testimonial-text">"I'm sold on this company for my future projects. <strong>Sam</strong> was competatively priced which was great, but what really stood out was the quality and work ethic of the crew. They were so polite as they arrived early and stayed late to complete each phase of the project."</p><p class="testimonial-author">— Jeff J.</p></div>
+                <div class="testimonial"><p class="testimonial-text">"I'm sold on this company for my future projects. <strong>Sam</strong> was competitively priced which was great, but what really stood out was the quality and work ethic of the crew. They were so polite as they arrived early and stayed late to complete each phase of the project."</p><p class="testimonial-author">— Jeff J.</p></div>
                 <div class="testimonial"><p class="testimonial-text">"<strong>Sam</strong> is simply the best. From his prompt response to our original request for an estimate all the way to finishing the job he is an absolute pro! He made our condo look brand new at a fair price! If you want it done right call <strong>Sam</strong>!"</p><p class="testimonial-author">— Brenda V.</p></div>
                 <div class="testimonial"><p class="testimonial-text">"Hired <strong>Sam</strong> to fix up our new house in San Diego before we moved in. He repaired a ceiling where wallpaper had been removed, painted baseboards, replaced a section of dry wall, repainted the front door, removed a built in desk and even did a stucco repair!"</p><p class="testimonial-author">— Nicole Erin B.</p></div>
             </div>
             <div class="testimonials-btn-wrapper">
-                <button class="btn"><a id="yelpReviews" href="https://www.yelp.com/biz/best-choice-painting-improvements-napa?rr=5" target="_blank" rel="noopener">Read more Reviews →</a></button>
+                <a class="btn" id="yelpReviews" href="https://www.yelp.com/biz/best-choice-painting-improvements-napa?rr=5" target="_blank" rel="noopener">Read more Reviews →</a>
             </div>
         </div>
     </section>
@@ -255,7 +292,7 @@
             <div style="max-width: 800px; margin: 2rem auto 0; text-align: center;">
                 <img class="about-image" src="images/about-us.jpg" alt="Best Choice Painting Improvements professional painting team in Napa County - Sam and crew">
                 <p style="margin-bottom: 1rem;">Every painter can hold a brush or run a sprayer, although some of them can't do it very well! Not every painter can show up on time, communicate clearly, and clean up like they were never there.</p>
-                <p style="margin-bottom: 1rem;">We're not interested in being the biggest painting company. We want to be the one you recommend to your neighbor. And now we're proud to offer professional pressure washing services to keep your entire property looking its best. Call <strong>Sam</strong> today to talk about your next project!</strong></p>
+                <p style="margin-bottom: 1rem;">We're not interested in being the biggest painting company. We want to be the one you recommend to your neighbor. And now we're proud to offer professional pressure washing services to keep your entire property looking its best. Call <strong>Sam</strong> today to talk about your next project!</p>
                 <p style="margin-bottom: 1rem;">Best Choice for Interior and Exterior Painting, Pressure Washing, and Improvements including drywall and texture matching. Our experienced team of professionals is committed to providing the highest quality work to our valued customers. Experience, attention to detail, cleanliness, and unbeatable prices are why Best Choice Painting Improvements is your Best Choice.</p>
                 <div style="margin-top: 2rem;">
                     <p><strong>📍 Service Area:</strong> Napa County and surrounding areas including, Sonoma, Sacramento, and even San Diego!</p>
@@ -277,7 +314,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div style="display: flex; justify-content: center;"><img src="images/best-choice-painting-improvements-logo.png"/> <p style="padding-top: 3px; font-family: Georgia, 'Times New Roman', Times, serif;">Best Choice Painting Improvements</p></div>
+            <div style="display: flex; justify-content: center;"><img src="images/best-choice-painting-improvements-logo.png" alt="Best Choice Painting Improvements logo"/> <p style="padding-top: 3px; font-family: Georgia, 'Times New Roman', Times, serif;">Best Choice Painting Improvements</p></div>
             <p style="margin-top: 0.5rem;"><a href="tel:+16198860306">📲 (619) 886-0306</a></p>
             <p style="margin-top: 0.5rem;"><a href="mailto:info@bestpainters.pro">📧 info@bestpainters.pro</a></p>
             <p style="margin-top: 1rem; font-size: 0.875rem;">© 2026 Best Choice Painting Improvements. All rights reserved.</p>
@@ -337,9 +374,9 @@
             },
             {
                 imgSrc: "images/kitchen-after.jpg",
-                imgAlt: "Sprayed kitchen cabinet transformation in Sacramento area from dark wood to Sherwin Willaims Tricorn Black",
+                imgAlt: "Sprayed kitchen cabinet transformation in Sacramento area from dark wood to Sherwin-Williams Tricorn Black",
                 title: "Cabinet Transformation",
-                description: "Sprayed Benjamin Moore 'Tricorn Black'"
+                description: "Sprayed Sherwin-Williams 'Tricorn Black'"
             },
             {
                 imgSrc: "images/deck-after.jpg",
